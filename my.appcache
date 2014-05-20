@@ -1,0 +1,21 @@
+CACHE MANIFEST
+
+
+CACHE:
+
+# html files
+
+
+# css files
+#static/style.css
+
+# images
+
+
+# js files
+#static/cards.js
+
+FALLBACK:
+
+
+NETWORK:

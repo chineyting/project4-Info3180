@@ -1,0 +1,64 @@
+<!doctype html>
+<html> <!-- lang=en manifest="my.appcache"> -->
+  <head>
+    <script type="text/javascript" src="{{ url_for('static', filename='memory.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='memory.css') }}">
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script> 
+  </head>
+
+  <body>
+      <br><h1 id="header">Memory Card Game</h1><br>
+      <a href="/" id="go">Go Home</a><br><br><br>
+      <!---------------------- GAME ---------------------->
+
+    <div class="gamelayer">
+
+      <!---- GAME SIDEBAR ---->
+      <div id="gameinfo">
+        <div id="playerinfo">
+          <div id="welcome"></div><br>
+          <div id="num_attempts"> </div><br>
+          <div id="turns"> Number of tries left: <p class="remains"></div><br>
+          <button type="button" id="savebutton" onclick="saveGame()">Save Game </button><br><br>
+          <div class="customize">
+          Choose a background:
+            <br><img src="{{ url_for('static', filename='reddesign.jpg') }}" id="red" height="50px" width="50px" onclick="changeCover('red design.jpg')" class="">
+            <img src="{{ url_for('static', filename='diffdesign.jpg') }}" id="diff" height="50px" width="50px"> 
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        <!---- CARDS ---->
+        <div id="PlayScore"></div>
+        <div class="sideBox"></div>
+        
+        <!---- SOUND ---->
+        <audio class="flip" src="flipcard.wav"></audio>
+        <audio class="tada" src="tada.wav"></audio>
+        <audio class="yay" src="yay.mp3"></audio>
+
+    </div>
+
+    <!-------------------- LEADERBOARD -------------------->
+
+    <div class="leaderboard">
+      <h3>Leaderboard</h3>
+      <ul class="leadertimes">
+        <li>This week</li>
+        <li>All time</li>
+      </ul>
+      <div class="pointsrankings">
+        <ul class="userrankings">
+          <li class="user1"></li>
+          <li class="user2"></li>
+          <li class="user3"></li>
+          <li class="user4"></li>
+          <li class="user5"></li>
+        </ul>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

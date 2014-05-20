@@ -1,0 +1,85 @@
+<!doctype html>
+<html> <!-- lang=en manifest="my.appcache"> -->
+   <head></head>
+   <body>
+   <style type="text/css">
+   	#header {
+		  	position: static;
+		  	font-family: arial;
+		  	text-align: center;
+		}
+
+     .button {
+       background-color: #fc024d;
+       padding: 8px;
+       padding-left: 10px;
+       padding-right: 10px;
+       border-radius: 4px;
+       color: white;
+       font-weight: bold;
+     }
+     
+		#newGame {
+			height:360px;
+			width:450px;
+			border: 2px solid black;
+			border-radius: 3px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;  
+		}
+
+     h3 {
+       font-family: Arial;
+     }
+   </style>
+
+   	<br><h1 id="header">Memory Card Game</h1><br>
+
+  	   <!-------------------- STARTUP MENU -------------------->
+
+      <div id="newGame">
+         <br><br><br>
+         <h3>Please select game mode:</h3><br>
+         <form method="link" action="cards.html">
+           <input type="submit" value="One Player" class="button"><br>
+         </form><br>
+         <form>
+           <input type="button" onclick="parent.location='names.html'" value="Two Player" class="button"><br><br>
+           <input type="button" onclick="parent.location='chat.html'" value="Two Player Network Play" class="button"><br>
+         </form><br>
+        
+        <p id="name"></p><br>
+         
+      </div>
+
+   <script type="text/javascript">
+     
+   function promptPlayer() {
+		var x;
+
+		localStorage.player = prompt("Please enter your name");
+
+		if (localStorage.player != null){
+		  x = "Welcome " + localStorage.player + ", press play!";
+		  document.getElementById("name").innerHTML=x;
+		  } 
+	}
+
+	function prompt2Player() {
+    	var x;
+
+    	localStorage.player1 = prompt("Enter name of Player 1:");
+      localStorage.player2 = prompt("Enter name of Player 2:");
+
+        if (localStorage.player1 && localStorage.player2 != null) {
+            x = "Welcome " + localStorage.player1 + " & " + localStorage.player2 + "! Press play!";
+            document.getElementById("name").innerHTML = x;
+
+        } else {
+            alert("Please refresh the page and enter names!");
+        }
+	}
+   </script>
+   </body>
+</html>

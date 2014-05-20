@@ -1,0 +1,210 @@
+.go {
+  text-align: center;
+}
+
+p, div{margin: 0; padding: 0;}
+
+body {
+  background: #fff;
+}
+
+#header {
+  position: static;
+  font-family: arial;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#playerinfo{
+  text-align: center;
+}
+
+.sideBox{
+  position: relative;
+  display: inline-block;
+  margin-left: 306px;
+}
+
+.card{
+  background:white;
+  display: inline-block;
+  font-size: 4em;
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  padding: 0px;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    
+
+
+    z-index: 800;
+    
+    -webkit-transform: rotatey(-180deg);
+    -webkit-transform-style: preserve- 3 d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all ease-in-out 0.4s;
+    opacity: 0;
+}
+
+.card p {
+  text-align: center;
+  font-size: .5em;
+  font-family:  Georgia,serif;
+
+}
+
+.diamond_suit:before, .diamond_suit:after {
+  font-size: .8em;
+  content: "♦";
+  color: red;
+}
+ 
+.heart_suit:before, .heart_suit:after {
+  font-size: .8em;
+  content: "♥";
+  color: red;
+}
+ 
+.club_suit:before, .club_suit:after {
+  font-size: .8em;
+  content: "♣";
+  color: black;
+}
+ 
+.spade_suit:before, .spade_suit:after {
+  font-size: .8em;
+  content: "♠";
+  color: black;
+}
+
+div[class*='suit']:before {
+  position: absolute;
+  left: 5px;
+  top: px;
+}
+ 
+div[class*='suit']:after {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.cover{
+  background-image: url('design.jpg');
+  position: absolute;
+  display: inline-block;
+  font-size: 4em;
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  padding: 0px;
+
+  -webkit-transform-style: preserve- 3 d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all ease-in-out 0.4s;
+    z-index: 900;
+
+
+}
+
+
+.card:hover{
+  border: 1px solid red;
+}
+
+.sidebox{
+  width: 600px;
+  height: 800px;
+}
+
+.cover:hover{
+  z-index: 50;
+};
+
+.black_card{
+  color: black;
+}
+.red_card{
+  color: red;
+}
+
+.cover{
+  /*display: none;*/
+}
+
+.flipped{
+  z-index: 1000;
+    -webkit-transform: rotatey(0deg);
+    opacity: 1;
+}
+
+.flippedcover{
+  z-index: 900;
+    -webkit-transform: rotatey(180deg);
+    opacity: 0;
+}
+
+.permflipped{
+  z-index: 1000;
+    -webkit-transform: rotatey(0deg);
+    opacity: 1;
+}
+
+.permflippedcover{
+  z-index: 900;
+    -webkit-transform: rotatey(180deg);
+    opacity: 0;
+}
+
+#newGame {
+  height:440px;
+  width:440px;
+  border: 2px solid black;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.gamelayer {
+  display: visible;
+}
+
+.gamelayer2 {
+  display: visible;
+}
+
+
+.leaderboard {
+  border: 1px solid #d3d3d3;
+  background-color: #E9E9E9;
+  width: 250px;
+  height: auto;
+  font-family: arial;
+  position: absolute;
+  margin-left: 1000px;
+  margin-top: -400px;
+  padding: 20px;
+}
+
+.leadertimes li {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+.leadertimes li:hover  

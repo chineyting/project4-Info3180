@@ -1,0 +1,47 @@
+<!doctype html>
+<html> <!-- lang=en manifest="my.appcache"> -->
+  <head></head>
+  <body>
+  	<style type="text/css">
+   	#header {
+		  	position: static;
+		  	font-family: arial;
+		  	text-align: center;
+		}
+      
+      .button {
+       background-color: #fc024d;
+       padding: 8px;
+       padding-left: 10px;
+       padding-right: 10px;
+       border-radius: 4px;
+       color: white;
+       font-weight: bold;
+     }
+
+	.enternames {
+			height:300px;
+			width:430px;
+			border: 2px solid black;
+			border-radius: 3px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;  
+		}
+
+   </style>
+
+   	<br><h1 id="header">Memory Card Game</h1><br>
+
+   	<div class="enternames">
+      <a href="/" id="go">Go Home</a><br>
+	  	<br><h2>Welcome!</h2>
+	  	<h3>Enter your names</h3>
+	  	Player 1: <input type="text"><br>
+	  	Player 2: <input type="text"><br><br>
+	  	<form>
+	        <input type="button" onclick="parent.location='memory2.html'" value="PLAY!" class="button">
+	    </form><br><br>
+    </div>
+  </body>
+</html>
