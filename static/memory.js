@@ -7,11 +7,9 @@ window.onload = function(){
         layout_cards();
         set_controls();
         turns_counter();
-        //promptPlayer();
         console.log("Part A");
     } else {
         set_controls();
-        //promptPlayer();
         showScore();
 
         $('.sideBox').html(localStorage.game_state);
@@ -33,13 +31,10 @@ function createDeck() {
     var j, k, index = 0;
     var pack_size;
 
-    // Set array of cards.
-    // total number of cards
     pack_size = ranks.length * suits.length;
     var cards = [];
 
 
-    // Fill the array with 'n' packs of cards.
     while (index < (pack_size)){
     for (j = 0; j < suits.length; j++){
        for (k = 0; k < ranks.length; k++){
@@ -52,8 +47,7 @@ function createDeck() {
     return cards;
 }
 
-// creates the card divs and adds them to side box. Also adds class
-// Card is also given id. 
+
 function showCards(cardJSON, card_num) {
     txt = cardJSON.rank + cardJSON.suite;    
     card = document.createElement("div");
@@ -89,7 +83,6 @@ function showDeck(deck){
     }
 }
 
-// Arranges the cards on the document and creates covers for them
 function layout_cards(){
     var  cards = [].slice.call(document.getElementsByClassName('card'));
     console.log(cards);
@@ -104,7 +97,6 @@ function layout_cards(){
             cover = document.createElement("div");
             cover.classList.add("cover");
             cover.classList.add(index);
-            // console.log("the cover is linked to " + cover.classList[1])
             document.querySelector(".sideBox").appendChild(cover);
             cover.style.top = (h*170)+"PX";
             cover.style.left = (w*120)+"px";
